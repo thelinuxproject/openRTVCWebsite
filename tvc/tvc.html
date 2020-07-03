@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- il faut redimentioné les photo-->
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>OpenRTVC • TVC</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="../image/logo-sans-fond.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+</head>
+<body>
+	<header >
+		<nav><!--créé un logo bien dimentioné-->
+			<a href="../index.html"><img src="../image/logotextblanc.png" width="400"></a>
+            <input type="checkbox" id="chk">
+            <label for="chk" id="bouton-menu">
+                <i class="fas fa-ellipsis-h"></i>
+            </label>
+
+			<ul class="menu">
+				<li><a href="../index.html">Accueil</a></li>
+				<li><a href="tvc.html">TVC</a></li>
+				<li><a href="../shop/shop.html">Shop</a></li>
+				<li><a href="../dev/developpement.html">Developpement</a></li>
+				<li><a href="../About/apropos.html">À propos</a></li>
+				<li><a href="../contact/contact.html">Contact</a></li>
+                <label for="chk" id="bouton-croix">
+                    <i class="fas fa-times"></i>
+                </label>
+			</ul>
+		</nav>
+	</header>
+
+	<section>
+		<h1>Trust Vector Control</h2>
+		<article>
+			<h2>QU'EST-CE QU'UN TVC ?</h2>
+			<p>
+				Le Trust Vector Controler est un système de correction de trajectoir pour une fusée amateur de faible puissance en se basant sur la technologie de poussée vectorielle. Avant de commencer, qu'est-ce que la poussée vectorielle ?<br>
+				La poussée vectorielle est une technologie utilisée dans l'aérospatial et l'aéronautique permettant de modifier l'attitude d'un engin en changeant la direction de la poussée. Plusieurs systèmes existent permettant cela comme la mobilité du moteur, l'utilisation d'une tuyère mobile, ou alors l'utilisation de surfaces de contrôles afin d'orienter le flux. Le but du projet OpenRTVC est de stabiliser une fusée amateur de faible puissance pour que son vol soit le plus vertical possible pendant la phase propulsée.
+			</p>
+			<p>
+				Plusieurs fichiers  <a href="https://github.com/OpenRTVC/openrtvc/tree/master/Conception/Etudes%20theoriques">PDF</a> manuscrits concernant l'aspect théorique de ce projet son disponibles.
+			</p>
+			<p>
+				Ce travail concerne principalement la recherche d'une fonction de transfert permettant de mettre en relation l'angle d'inclinaison de la fusée et l'angle du moteur fusée. Le modèle établit est en 2D. En partant de l'hypothèse que le roulis et le tangage de la fusée soient correctement corrigés simultanément et indépendament l'un de l'autre par le programme embarqué, le modèle 2D semble ne pas être une mauvaise approche. Pour ceux faire, deux asservissements de type PID sont intégrés dans le programme. L'attitude de la fusée sera mesurée par grâce à une centrale inertielle placée au centre de gravité de celle-ci. Une fois le modèle élaboré et la fonction de transfert trouvée, l'étape suivante est la réalisation d'une simulation sous Matlab 2017 afin de déterminer les coefficients approximatifs de réglage des correcteurs PID. Ces valeurs dépendent du moment d'inertie de la fusée sur l'axe en question, de la poussée moyenne du moteur et de la distance entre le point d'application de la force de poussée et le centre de gravité de la fusée. Les autres documents concernent la recherche d'une méthode de mesure du moment d'inertie de sa fusée avec des moyens simples et également la résolution d'un problème mécanique concernant la cinématique du système d'orientation du moteur (système TVC).
+			</p>
+		</article>
+		<article>
+			<h2>INFORMATIONS</h2>
+			<p>
+				Tous les travaux d'OpenRTVC sont sous <a href="../about/apropos.html#MIT">Licence MIT</a>
+			</p>
+			<p>
+				Si vous voulez construire votre TVC de A à Z vous retrouverez la liste de tout les composant mecanique et electronique dans la partie<a href="../dev/developpement.html"> developpement </a>Ainsi que toute la documentation nécessaire à la fabrication.<br>
+				Et pour les plus impatient d'entre vous voici quelques <a href="../shop/shop.html">kits OpenRTVC</a><br>
+				Vous retouvez aussi l'integraliter des fichier qui on servi a sa conception sur notre <a href="https://github.com/OpenRTVC/openrtvc">github</a> et et vous pouver des à présent telecharger le PDF explicatif ci-desous.
+			</p>
+		</article>
+	</section>
+
+	<footer class="footer">
+		<a href="#"><img src="../image/logotextblanc.png" width="150" align="left"></a>
+		<nav>
+			<ul>
+                <a href="../About/apropos.html">À propos</a>
+                <a href="../contact/contact.html">Contact</a>
+                <a href="https://www.youtube.com/channel/UC_3ZVtFjKYshJCSXWwzz5ag">YouTube</a>
+                <a href="https://github.com/OpenRTVC/openrtvc">GitHub</a>
+            </ul>
+		</nav>
+		<p>Copyright &copy;2020 OpenRTVC</p>
+	</footer>
+</body>
+</html>
